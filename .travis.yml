@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t form -f Dockerfile.dev .
+  - docker build -t RudyStark/formdevops -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true form npm run test
+  - docker run -e CI=true RudyStark/formdevops npm run test
 
