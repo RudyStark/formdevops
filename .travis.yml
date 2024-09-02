@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t form -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true form npm run test
+
