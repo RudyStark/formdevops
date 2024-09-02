@@ -9,3 +9,13 @@ before_install:
 script:
   - docker run -e CI=true rudystark/formdevops npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "form"
+  env: "Form-env"
+  bucket_name: "elasticbeanstalk-us-east-1-430118856661"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
