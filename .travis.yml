@@ -14,8 +14,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "form"
-  env: "Form-env"
+  app: "form-a"
+  env: "Form-a-env"
   bucket_name: "elasticbeanstalk-us-east-1-430118856661"
   on:
     branch: main
